@@ -55,8 +55,8 @@ export default {
     if (!prompt) {
       return json({ error: "Missing 'prompt'" }, 400, env);
     }
-    // Keep prompts short and bounded to control cost/abuse.
-    if (prompt.length > 500) {
+    // Keep prompts bounded to control cost/abuse.
+    if (prompt.length > 900) {
       return json({ error: "Prompt too long" }, 400, env);
     }
 
