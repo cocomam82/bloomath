@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>데이터로 보는 수학 | 꽃셈수학 Bloom Math</title>
+<title>가맹점 모집 | 꽃셈수학 Bloom Math</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
@@ -135,6 +135,47 @@
     .research-grid{ grid-template-columns:1fr; }
     nav.links{ display:none; }
   }
+
+  .process-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
+  .process-card{
+    background:var(--cream-soft); border:1px solid var(--line); border-radius:18px; padding:22px 18px; position:relative;
+  }
+  .process-card .step{
+    width:30px; height:30px; border-radius:50%; background:var(--pink-deep); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Gaegu',sans-serif; font-weight:700; font-size:14px;
+    margin-bottom:12px;
+  }
+  .process-card h4{ font-family:'Gaegu', sans-serif; font-weight:700; font-size:15.5px; margin-bottom:6px; }
+  .process-card p{ font-size:12.5px; line-height:1.7; color:var(--ink-soft); }
+  .process-arrow{ display:none; }
+
+  .benefit-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .benefit-card{
+    background:var(--cream-soft); border:1px solid var(--line); border-radius:18px; padding:24px 22px;
+  }
+  .benefit-card .icon{
+    width:40px; height:40px; border-radius:12px; background:rgba(230,141,160,0.14);
+    display:flex; align-items:center; justify-content:center; font-size:18px; margin-bottom:14px;
+  }
+  .benefit-card h4{ font-family:'Gaegu', sans-serif; font-weight:700; font-size:16px; margin-bottom:6px; }
+  .benefit-card p{ font-size:13px; line-height:1.7; color:var(--ink-soft); }
+
+  .cta-band{
+    background:linear-gradient(135deg, var(--pink-deep), var(--coral));
+    border-radius:32px; padding:44px 40px; text-align:center; color:#fff;
+  }
+  .cta-band h3{ font-family:'Gaegu', sans-serif; font-weight:700; font-size:24px; margin-bottom:10px; }
+  .cta-band p{ font-size:14px; opacity:.95; margin-bottom:22px; }
+  .cta-band .btn-primary{ background:#fff; color:var(--pink-deep); }
+  .cta-band .btn-primary:hover{ box-shadow:0 12px 26px rgba(0,0,0,0.18); }
+
+  .contact-info{ display:flex; gap:28px; justify-content:center; margin-top:20px; flex-wrap:wrap; font-size:13.5px; }
+  .contact-info span{ display:inline-flex; align-items:center; gap:6px; }
+
+  @media (max-width: 900px){
+    .process-grid{ grid-template-columns:1fr 1fr; }
+    .benefit-grid{ grid-template-columns:1fr; }
+  }
 </style>
 </head>
 <body>
@@ -148,10 +189,10 @@
     <nav class="links">
       <a href="index.html#brand">브랜드 소개</a>
       <a href="index.html#curriculum">학년별 커리큘럼</a>
-      <a href="data-insights.html" class="active">데이터로 보는 수학</a>
+      <a href="data-insights.html">데이터로 보는 수학</a>
       <a href="greeting.html">인사말</a>
       <a href="textbook.html">교재안</a>
-      <a href="franchise.html">가맹점 모집</a>
+      <a href="franchise.html" class="active">가맹점 모집</a>
     </nav>
     <a href="index.html#contact" class="btn btn-primary btn-sm">문의하기</a>
   </div>
@@ -159,129 +200,98 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <span class="eyebrow"><span class="dot"></span>공공데이터로 확인하는 이야기</span>
-    <h1>숫자로 보는, 손으로 배우는 수학</h1>
-    <p>통계청·교육부·IEA(국제교육성취도평가협회) 등 공신력 있는 공공기관 자료와 국내외 학술 연구를 바탕으로, 왜 지금 &lsquo;손으로 배우는 수학&rsquo;이 필요한지 데이터로 짚어봅니다.</p>
+    <span class="eyebrow"><span class="dot"></span>꽃셈수학 가맹 파트너 모집</span>
+    <h1>학령인구는 줄어도,<br>한 아이에게 쓰는 마음은 더 커지고 있습니다</h1>
+    <p>통계청·교육부 공공데이터가 보여주는 건 명확합니다. 학생 수는 줄어도 사교육 시장은 매년 최고치를 경신합니다. 손끝으로 배우는 수학이라는 차별화된 커리큘럼으로, 지금 우리 동네에 꽃셈수학 교실을 열어보세요.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <span class="section-label"><span class="num">1</span>왜 지금 초등 수학인가</span>
-    <h2>실력은 최상위, 마음은 최하위권</h2>
-    <p class="lead">한국 초등학생의 사교육 참여율과 수학 성취도는 세계적으로도 매우 높은 수준이지만, 정작 수학을 &lsquo;좋아하는 마음&rsquo;은 국제 비교에서 가장 낮은 편에 속합니다.</p>
+    <span class="section-label"><span class="num">1</span>왜 지금인가</span>
+    <h2>시장이 증명하는 기회</h2>
+    <p class="lead">초중고 학생 수는 해마다 줄고 있지만, 사교육비 총액은 4년 연속 역대 최고치를 경신하고 있습니다. 특히 초등 부문의 1인당 월평균 사교육비 증가율은 전체 학교급 중 가장 가파릅니다.</p>
 
     <div class="stat-grid">
       <div class="stat-card">
+        <div class="num">29.2조원</div>
+        <div class="label">초중고 사교육비 총액</div>
+        <div class="note">2024년, 전년대비 7.7%↑ · 4년 연속 최고치</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">13.2조원</div>
+        <div class="label">초등 사교육비 총액</div>
+        <div class="note">2024년, 전년대비 6.5%↑</div>
+      </div>
+      <div class="stat-card">
         <div class="num">87.7%</div>
-        <div class="label">초등학생 사교육 참여율</div>
-        <div class="note">학교급 중 최고 · 2024년</div>
-      </div>
-      <div class="stat-card">
-        <div class="num">50.5%</div>
-        <div class="label">사교육 목적 1위</div>
-        <div class="note">&ldquo;학교수업 보충&rdquo;이 가장 큰 이유</div>
-      </div>
-      <div class="stat-card">
-        <div class="num">수학</div>
-        <div class="label">참여율 1위 과목</div>
-        <div class="note">일반교과 중 사교육 참여율 최고</div>
+        <div class="label">초등 사교육 참여율</div>
+        <div class="note">전체 학교급 중 최고</div>
       </div>
       <div class="stat-card">
         <div class="num">44.2만원</div>
-        <div class="label">초등 월평균 사교육비</div>
-        <div class="note">2022년 대비 약 19% 증가</div>
+        <div class="label">초등 1인당 월평균 사교육비</div>
+        <div class="note">전년대비 11.1%↑ · 학교급 중 최고 증가율</div>
       </div>
     </div>
 
     <div class="chart-panel">
-      <h3>한국 초4 수학: 성취도는 세계 3위, 흥미는 국제 최하위권</h3>
-      <p class="sub">TIMSS 2023, 58개국 중 순위 (막대가 길수록 좋은 순위)</p>
-      <div class="chart-wrap" style="height:260px;">
-        <canvas id="gapChart" role="img" aria-label="한국 초등학교 4학년 수학 성취도 순위 3위, 자신감 순위 50위, 흥미 순위 58위를 보여주는 가로 막대 차트">한국 초4 수학 성취도 3위, 자신감 50위, 흥미 58위(최하위)</canvas>
-      </div>
-      <p class="source-note">출처: IEA TIMSS 2023 (교육부·한국교육과정평가원, 2024.12.4 발표)</p>
-    </div>
-
-    <div class="chart-panel">
-      <h3>학년이 올라가도 그대로인 흥미·자신감 &mdash; 초4와 중2, 나란히 보면</h3>
-      <p class="sub">TIMSS 2023, 각 학년 조사 대상국 중 상위 백분율 (막대가 길수록 상위권)</p>
-      <div class="chart-wrap" style="height:260px;">
-        <canvas id="gradeCompareChart" role="img" aria-label="초등학교 4학년과 중학교 2학년의 수학 흥미도, 자신감 국제 순위를 비교하는 가로 막대 차트. 초4는 58개국 중 흥미 58위, 자신감 50위. 중2는 43개국 중 흥미 37위, 자신감 38위">초4(58개국 중) 흥미 58위·자신감 50위 / 중2(43개국 중) 흥미 37위·자신감 38위</canvas>
-      </div>
-      <p class="sub" style="margin-top:14px; margin-bottom:0;">국가 수가 달라 순위를 그대로 비교하기는 어렵지만, 백분율로 환산해도 두 학년 모두 하위 15% 안팎에 머뭅니다. 한 번 낮아진 흥미는 학년이 바뀌어도 저절로 회복되지 않는다는 뜻입니다. &mdash; 그렇다면 관건은 &lsquo;언제 잡아주는가&rsquo;이고, 답은 되도록 이른 초등 시기입니다.</p>
-      <p class="source-note">출처: IEA TIMSS 2023 (교육부·한국교육과정평가원, 2024.12.4 발표) &middot; 국가 수 차이를 반영해 상위 백분율로 환산</p>
-    </div>
-
-    <div class="chart-panel">
-      <h3>초등학생 1인당 월평균 사교육비 추이</h3>
-      <p class="sub">전체학생 기준, 3년간 지속 증가</p>
-      <div class="chart-wrap" style="height:260px;">
-        <canvas id="trendChart" role="img" aria-label="초등학생 월평균 사교육비가 2022년 37만2천원에서 2024년 44만2천원으로 증가한 추세를 보여주는 선 그래프">2022년 37.2만원, 2023년 39.8만원, 2024년 44.2만원</canvas>
+      <h3>사교육비 총액, 4년 연속 역대 최고치</h3>
+      <p class="sub">초중고 전체 사교육비 총액 추이</p>
+      <div class="chart-wrap" style="height:240px;">
+        <canvas id="marketTrendChart" role="img" aria-label="초중고 사교육비 총액이 2022년 26조원에서 2023년 27조1천억원, 2024년 29조2천억원으로 계속 증가하는 선 그래프">2022년 26.0조원, 2023년 27.1조원, 2024년 29.2조원</canvas>
       </div>
       <p class="source-note">출처: 통계청·교육부 「초중고사교육비조사」 (2022~2024)</p>
+    </div>
+
+    <div class="chart-panel">
+      <h3>학생은 줄어도, 투자는 늘어납니다</h3>
+      <p class="sub">2023년 대비 2024년 증감률 비교</p>
+      <div class="chart-wrap" style="height:240px;">
+        <canvas id="growthCompareChart" role="img" aria-label="초중고 전체 학생수는 전년대비 1.5퍼센트 감소했지만, 사교육비 총액은 7.7퍼센트, 초등 1인당 월평균 사교육비는 11.1퍼센트 증가했음을 보여주는 막대 차트">학생수 -1.5%, 사교육비 총액 +7.7%, 초등 1인당 월평균 사교육비 +11.1%</canvas>
+      </div>
+      <p class="sub" style="margin-top:14px; margin-bottom:0;">아이 한 명 한 명에게 쓰는 교육비는 오히려 빠르게 늘고 있습니다. 학령인구 감소는 시장이 작아진다는 뜻이 아니라, 한 아이당 투자가 커지는 &lsquo;질적 성장&rsquo;의 시대로 옮겨가고 있다는 뜻입니다.</p>
+      <p class="source-note">출처: 통계청·교육부 「2024년 초중고사교육비조사 결과」 (2025.3.13 발표)</p>
     </div>
   </div>
 </section>
 
 <section class="section" style="background:var(--paper); border-radius:44px;">
   <div class="wrap">
-    <span class="section-label"><span class="num">2</span>손으로 배우면 달라집니다</span>
-    <h2>구체물 조작 학습, 국제 연구가 증명합니다</h2>
-    <p class="lead">추상적인 기호보다 손으로 만지고 조작하는 학습이 수학 이해와 자신감에 실질적인 효과가 있다는 사실은 다수의 국내외 연구로 검증되었습니다.</p>
+    <span class="section-label"><span class="num">2</span>가맹 혜택</span>
+    <h2>꽃셈수학과 함께라면 처음도 든든합니다</h2>
+    <p class="lead">교육 경험이 없어도 괜찮습니다. 커리큘럼 설계부터 운영까지, 본사가 함께 만들어갑니다.</p>
 
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="num">55건</div>
-        <div class="label">국제 메타분석 연구 수</div>
-        <div class="note">학생 7,237명 종합 분석</div>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="icon">🎓</div>
+        <h4>창업 초기 교육</h4>
+        <p>수업 진행법, 학부모 상담, 원 운영 노하우까지 오픈 전 실습 중심 교육을 제공합니다.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">7~11세</div>
-        <div class="label">효과가 가장 큰 연령대</div>
-        <div class="note">초등학생 시기와 일치</div>
+      <div class="benefit-card">
+        <div class="icon">🧺</div>
+        <h4>전용 교구·교재 공급</h4>
+        <p>앙금·쿠키 조형 등 꽃셈수학만의 학습 재료와 학년별 교재를 정기적으로 안정적으로 공급합니다.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">상위 69%</div>
-        <div class="label">조작 학습 효과 수준</div>
-        <div class="note">비사용 학생 대비 성취 수준</div>
+      <div class="benefit-card">
+        <div class="icon">🔄</div>
+        <h4>커리큘럼 지속 업데이트</h4>
+        <p>학년별 20주 커리큘럼을 교육 트렌드와 현장 피드백에 맞춰 계속 보완해 전달합니다.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">자신감 ↑</div>
-        <div class="label">수학불안 ↓</div>
-        <div class="note">국내 실험연구에서 확인</div>
+      <div class="benefit-card">
+        <div class="icon">📍</div>
+        <h4>상권 보호 정책</h4>
+        <p>일정 반경 내 중복 출점을 제한해, 먼저 시작한 원장님의 상권을 지켜드립니다.</p>
       </div>
-    </div>
-
-    <div class="chart-panel">
-      <h3>구체물 조작 학습의 효과크기 비교</h3>
-      <p class="sub">여러 메타분석에서 확인된 효과크기(Cohen&rsquo;s d) — 0.2=작음, 0.5=중간, 0.8=큼</p>
-      <div class="chart-wrap" style="height:220px;">
-        <canvas id="effectChart" role="img" aria-label="구체물 조작 학습의 효과크기를 보여주는 막대 차트. Carbonneau 2013 연구 소에서 중간 수준, Hattie 종합분석 0.38, Domino 2010 연구 0.50">Carbonneau(2013) 소~중효과, Hattie 종합 0.38, Domino(2010) 0.50</canvas>
+      <div class="benefit-card">
+        <div class="icon">📣</div>
+        <h4>마케팅·홍보 지원</h4>
+        <p>브랜드 홈페이지, 홍보물 템플릿, 지역 오픈 이벤트 기획을 함께 지원합니다.</p>
       </div>
-      <p class="source-note">출처: Carbonneau, Marley & Selig (2013, <i>Journal of Educational Psychology</i>) · Hattie Visible Learning MetaX · Domino (2010)</p>
-    </div>
-
-    <div class="research-grid">
-      <div class="research-card">
-        <span class="tag">해외 메타분석</span>
-        <h4>Carbonneau, Marley &amp; Selig (2013)</h4>
-        <p>유치원생부터 대학생까지 55개 연구, 7,237명을 종합한 메타분석. 구체물 조작 수업이 추상 기호만 사용한 수업보다 통계적으로 유의하게 우수했으며, 특히 만 7~11세(초등 연령)에서 효과가 컸습니다.</p>
-      </div>
-      <div class="research-card">
-        <span class="tag">국제 종합분석</span>
-        <h4>John Hattie, Visible Learning</h4>
-        <p>9개 메타분석·368개 연구·22,983명을 종합한 결과, 수학 조작물 활용의 가중평균 효과크기는 0.38로, 학업성취 향상에 기여할 잠재력이 있는 개입으로 분류되었습니다.</p>
-      </div>
-      <div class="research-card">
-        <span class="tag">국내 실험연구</span>
-        <h4>김영남 (2002), 한국수학교육학회</h4>
-        <p>초등 3·4·5학년 519명 대상 실험에서, 구체적 조작물을 활용한 도형 프로그램이 문제해결력과 수학적 자기효능감을 유의하게 높이고 수학불안을 유의하게 낮췄습니다.</p>
-      </div>
-      <div class="research-card">
-        <span class="tag">이론적 배경</span>
-        <h4>Piaget의 구체적 조작기</h4>
-        <p>만 7~11세는 구체물을 통해 추상 개념을 형성하는 발달 단계로, NCTM(전미수학교사협의회) 역시 조작물을 수학 학습의 핵심 도구로 권장하고 있습니다.</p>
+      <div class="benefit-card">
+        <div class="icon">🤝</div>
+        <h4>운영 상시 컨설팅</h4>
+        <p>오픈 이후에도 학생 모집, 클래스 운영, 학부모 커뮤니케이션을 함께 고민합니다.</p>
       </div>
     </div>
   </div>
@@ -289,53 +299,49 @@
 
 <section class="section">
   <div class="wrap">
-    <span class="section-label"><span class="num">3</span>아이 기질에 맞는 학습법</span>
-    <h2>모든 아이가 같은 방식으로 배우지는 않습니다</h2>
-    <p class="lead">발달심리학은 오래전부터 아이마다 타고난 기질이 다르다고 말해왔습니다. 손으로 만지는 활동이 특별한 이유는, 기질이 달라도 &lsquo;성공의 경험&rsquo;을 만드는 방식은 조절할 수 있기 때문입니다.</p>
+    <span class="section-label"><span class="num">3</span>창업 절차</span>
+    <h2>상담부터 오픈까지, 다섯 단계</h2>
+    <p class="lead">문의 남겨주시면 담당자가 순서대로 안내해 드립니다.</p>
 
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="num">3가지</div>
-        <div class="label">타고난 기질 유형</div>
-        <div class="note">순한 기질 · 까다로운 기질 · 더딘 기질</div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="step">1</div>
+        <h4>상담 신청</h4>
+        <p>온라인 문의 또는 전화로 창업 상담을 신청합니다.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">감각 활동</div>
-        <div class="label">자아존중감 ↑</div>
-        <div class="note">감각 자료를 활용한 활동 후 정서적 안녕감 향상 보고</div>
+      <div class="process-card">
+        <div class="step">2</div>
+        <h4>상권 분석</h4>
+        <p>희망 지역의 학령인구와 경쟁 현황을 함께 검토합니다.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">촉각 자극</div>
-        <div class="label">집중·조절력과 연결</div>
-        <div class="note">손의 감각 경험이 정서 조절의 통로가 됨</div>
+      <div class="process-card">
+        <div class="step">3</div>
+        <h4>가맹 계약</h4>
+        <p>가맹 조건을 안내받고 계약을 진행합니다.</p>
       </div>
-      <div class="stat-card">
-        <div class="num">반복된 성공</div>
-        <div class="label">자기효능감의 뿌리</div>
-        <div class="note">작은 성취의 누적이 자신감을 만듦</div>
+      <div class="process-card">
+        <div class="step">4</div>
+        <h4>인테리어·교육</h4>
+        <p>공간 세팅과 함께 원장님 실습 교육을 진행합니다.</p>
+      </div>
+      <div class="process-card">
+        <div class="step">5</div>
+        <h4>오픈</h4>
+        <p>오픈 이벤트와 초기 모객을 함께 준비합니다.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="research-grid">
-      <div class="research-card">
-        <span class="tag">고전 이론</span>
-        <h4>Thomas &amp; Chess, 뉴욕종단연구</h4>
-        <p>아동을 &lsquo;순한 기질&rsquo;, &lsquo;까다로운 기질&rsquo;, &lsquo;더딘(느린) 기질&rsquo; 세 유형으로 분류한 고전적 연구로, 이후 발달심리학과 부모교육의 기본 틀이 되었습니다. 같은 수업이라도 기질에 따라 아이가 반응하는 속도와 방식은 다를 수 있습니다.</p>
-      </div>
-      <div class="research-card">
-        <span class="tag">감각 환경 연구</span>
-        <h4>Chilvers &amp; Cole (2006)</h4>
-        <p>무드 조명, 향, 음악, 촉감 재료 등 다양한 감각 자료를 갖춘 환경에서 아이들이 놀이했을 때 자아존중감과 정서적 안녕감이 높아졌다는 결과가 보고되었습니다. 감각을 통한 몰입이 정서적으로도 안전감을 준다는 근거입니다.</p>
-      </div>
-      <div class="research-card">
-        <span class="tag">꽃셈수학의 관찰</span>
-        <h4>활동적인 아이 · 신중한 아이</h4>
-        <p>에너지가 많은 아이는 반죽을 치대고 모양을 만드는 과정에서 자연스럽게 집중으로 이어지고, 신중하고 느린 아이는 실패해도 다시 뭉쳐 고칠 수 있는 재료 특성 덕분에 부담 없이 반복하며 자신감을 쌓습니다. 기질이 달라도 &lsquo;손끝의 성공 경험&rsquo;이라는 같은 도구를 씁니다.</p>
-      </div>
-      <div class="research-card">
-        <span class="tag">한 걸음 더</span>
-        <h4>사교육이 채우지 못하는 부분</h4>
-        <p>학습지·문제풀이 중심 사교육은 인지적 성취에 집중하는 경우가 많아, 기질에 따른 정서적 접근까지 함께 다루기는 쉽지 않습니다. 손으로 배우는 수업은 &lsquo;무엇을 아는가&rsquo;와 &lsquo;어떻게 느끼는가&rsquo;를 함께 다룬다는 점에서 차별점을 가집니다.</p>
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band">
+      <h3>우리 동네 첫 꽃셈수학 교실, 지금 문의하세요</h3>
+      <p>정확한 가맹 조건과 비용은 상담을 통해 자세히 안내해 드립니다.</p>
+      <a href="index.html#contact" class="btn btn-primary">가맹 상담 신청하기</a>
+      <div class="contact-info">
+        <span>📞 가맹 문의 전화 (상담 시 안내)</span>
+        <span>✉️ franchise@bloomath.example</span>
       </div>
     </div>
   </div>
@@ -347,13 +353,7 @@
       <h3>참고 자료 및 출처</h3>
       <ol>
         <li><b>통계청·교육부.</b> 「2024년 초중고사교육비조사 결과」. 2025.3.13 발표.</li>
-        <li><b>교육부·한국교육과정평가원(KICE).</b> 「TIMSS 2023 결과」. 2024.12.4 발표. (IEA, International Association for the Evaluation of Educational Achievement)</li>
-        <li><b>Carbonneau, K. J., Marley, S. C., &amp; Selig, J. P. (2013).</b> A meta-analysis of the efficacy of teaching mathematics with concrete manipulatives. <i>Journal of Educational Psychology, 105</i>(2), 380&ndash;400.</li>
-        <li><b>Hattie, J.</b> Visible Learning MetaX &mdash; Manipulative materials on math.</li>
-        <li><b>Domino, J. (2010).</b> The effects of physical manipulatives on achievement in mathematics in grades K&ndash;6. (메타분석)</li>
-        <li><b>김영남 (2002).</b> 구체적 조작물을 이용한 도형 프로그램이 아동의 문제 해결력, 수학적 자기효능감, 수학불안에 미치는 효과. 한국수학교육학회.</li>
-        <li><b>Thomas, A., &amp; Chess, S. (1977).</b> <i>Temperament and Development.</i> New York: Brunner/Mazel. (뉴욕종단연구, New York Longitudinal Study)</li>
-        <li><b>Chilvers, R., &amp; Cole, M. (2006).</b> Sensory rooms and children&rsquo;s wellbeing in early years settings. (국내 유아교육 감각놀이 연구에서 재인용)</li>
+        <li><b>통계청.</b> 「장래인구추계」. 학령인구(6~11세) 및 초중고 학생수 통계.</li>
       </ol>
     </div>
   </div>
@@ -369,118 +369,18 @@
   </div>
 </footer>
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const mutedText = '#8C7563';
 const gridColor = 'rgba(107,74,58,0.08)';
 
-const gapOriginalRanks = [3, 50, 58];
-const gapLabels = ['수학 성취도 · 3위', '자신감 · 50위', '흥미 · 58위 (최하위)'];
-
-new Chart(document.getElementById('gapChart'), {
-  type: 'bar',
-  data: {
-    labels: gapLabels,
-    datasets: [{
-      // Inverted so a LONGER bar always means BETTER standing (58 countries total)
-      data: gapOriginalRanks.map(rank => 59 - rank),
-      backgroundColor: ['#7FA8C9', '#EFB255', '#D96E86'],
-      borderRadius: 6,
-      barThickness: 34
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    responsive: true, maintainAspectRatio: false,
-    layout: { padding: { right: 56 } },
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: (c) => gapOriginalRanks[c.dataIndex] + '위 (58개국 중, 1위가 최상위)' } }
-    },
-    scales: {
-      x: { display: false, min: 0, max: 58 },
-      y: { ticks: { color: mutedText, font: { size: 13 } }, grid: { display: false } }
-    }
-  },
-  plugins: [{
-    id: 'rankEndLabel',
-    afterDatasetsDraw(chart) {
-      const { ctx } = chart;
-      const meta = chart.getDatasetMeta(0);
-      ctx.save();
-      ctx.font = '600 13px "Gowun Dodum", sans-serif';
-      ctx.fillStyle = mutedText;
-      ctx.textBaseline = 'middle';
-      meta.data.forEach((bar, i) => {
-        ctx.fillText(gapOriginalRanks[i] + '위', bar.x + 10, bar.y);
-      });
-      ctx.restore();
-    }
-  }]
-});
-
-const gradeCompareRaw = [
-  { grade: '초4 · 흥미', rank: 58, total: 58 },
-  { grade: '초4 · 자신감', rank: 50, total: 58 },
-  { grade: '중2 · 흥미', rank: 37, total: 43 },
-  { grade: '중2 · 자신감', rank: 38, total: 43 }
-];
-
-new Chart(document.getElementById('gradeCompareChart'), {
-  type: 'bar',
-  data: {
-    labels: gradeCompareRaw.map(d => d.grade),
-    datasets: [{
-      data: gradeCompareRaw.map(d => Math.round((d.total - d.rank + 1) / d.total * 1000) / 10),
-      backgroundColor: ['#D96E86', '#EFB255', '#7FA8C9', '#A3BB80'],
-      borderRadius: 6,
-      barThickness: 30
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    responsive: true, maintainAspectRatio: false,
-    layout: { padding: { right: 76 } },
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: (c) => {
-            const d = gradeCompareRaw[c.dataIndex];
-            return d.rank + '위 / ' + d.total + '개국 중 (상위 ' + c.raw + '%)';
-          }
-        }
-      }
-    },
-    scales: {
-      x: { display: false, min: 0, max: 100 },
-      y: { ticks: { color: mutedText, font: { size: 13 } }, grid: { display: false } }
-    }
-  },
-  plugins: [{
-    id: 'gradeEndLabel',
-    afterDatasetsDraw(chart) {
-      const { ctx } = chart;
-      const meta = chart.getDatasetMeta(0);
-      ctx.save();
-      ctx.font = '600 12.5px "Gowun Dodum", sans-serif';
-      ctx.fillStyle = mutedText;
-      ctx.textBaseline = 'middle';
-      meta.data.forEach((bar, i) => {
-        const d = gradeCompareRaw[i];
-        ctx.fillText(d.rank + '위/' + d.total + '개국', bar.x + 10, bar.y);
-      });
-      ctx.restore();
-    }
-  }]
-});
-
-new Chart(document.getElementById('trendChart'), {
+new Chart(document.getElementById('marketTrendChart'), {
   type: 'line',
   data: {
     labels: ['2022년', '2023년', '2024년'],
     datasets: [{
-      data: [37.2, 39.8, 44.2],
+      data: [26.0, 27.1, 29.2],
       borderColor: '#D96E86',
       backgroundColor: 'rgba(217,110,134,0.12)',
       fill: true, tension: 0.3,
@@ -493,38 +393,54 @@ new Chart(document.getElementById('trendChart'), {
     responsive: true, maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
-      tooltip: { callbacks: { label: (c) => c.raw + '만원' } }
+      tooltip: { callbacks: { label: (c) => c.raw + '조원' } }
     },
     scales: {
-      y: { min: 0, max: 50, ticks: { color: mutedText, callback: (v) => v + '만원' }, grid: { color: gridColor } },
+      y: { min: 0, max: 35, ticks: { color: mutedText, callback: (v) => v + '조원' }, grid: { color: gridColor } },
       x: { ticks: { color: mutedText }, grid: { display: false } }
     }
   }
 });
 
-new Chart(document.getElementById('effectChart'), {
+new Chart(document.getElementById('growthCompareChart'), {
   type: 'bar',
   data: {
-    labels: ['Carbonneau (2013)', 'Hattie 종합분석', 'Domino (2010)'],
+    labels: ['초중고 학생수', '사교육비 총액', '초등 1인당 월평균 사교육비'],
     datasets: [{
-      data: [0.35, 0.38, 0.50],
-      backgroundColor: '#A3BB80',
+      data: [-1.5, 7.7, 11.1],
+      backgroundColor: ['#7FA8C9', '#EFB255', '#D96E86'],
       borderRadius: 6,
-      barThickness: 34
+      barThickness: 40
     }]
   },
   options: {
-    indexAxis: 'y',
     responsive: true, maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
-      tooltip: { callbacks: { label: (c) => '효과크기 ' + c.raw } }
+      tooltip: { callbacks: { label: (c) => (c.raw > 0 ? '+' : '') + c.raw + '%' } }
     },
     scales: {
-      x: { min: 0, max: 0.8, ticks: { color: mutedText }, grid: { color: gridColor } },
-      y: { ticks: { color: mutedText, font: { size: 13 } }, grid: { display: false } }
+      y: { ticks: { color: mutedText, callback: (v) => v + '%' }, grid: { color: gridColor } },
+      x: { ticks: { color: mutedText, font: { size: 12.5 } }, grid: { display: false } }
     }
-  }
+  },
+  plugins: [{
+    id: 'growthEndLabel',
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      const meta = chart.getDatasetMeta(0);
+      const data = [-1.5, 7.7, 11.1];
+      ctx.save();
+      ctx.font = '600 13px "Gowun Dodum", sans-serif';
+      ctx.fillStyle = mutedText;
+      ctx.textAlign = 'center';
+      meta.data.forEach((bar, i) => {
+        const y = data[i] >= 0 ? bar.y - 10 : bar.y + 18;
+        ctx.fillText((data[i] > 0 ? '+' : '') + data[i] + '%', bar.x, y);
+      });
+      ctx.restore();
+    }
+  }]
 });
 </script>
 </body>
