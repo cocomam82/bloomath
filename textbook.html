@@ -65,10 +65,10 @@
         .site-nav-brand img{ width:30px; height:30px; object-fit:contain; }
         .site-nav-brand span{ font-family:'Gaegu', sans-serif; font-weight:700; font-size:19px; color:#D96E86; }
         .site-nav-links{ display:flex; gap:28px; }
-        .site-nav-links a{ font-family:'Noto Sans KR', sans-serif; font-size:14px; color:#8C7563; text-decoration:none; transition:color .2s; }
+        .site-nav-links a{ font-family:'Noto Sans KR', sans-serif; font-size:14.5px; color:#8C7563; text-decoration:none; transition:color .2s; }
         .site-nav-links a:hover, .site-nav-links a.active{ color:#D96E86; }
         .site-nav-cta{
-            font-family:'Noto Sans KR', sans-serif; font-size:13.5px; font-weight:600; color:#fff;
+            font-family:'Noto Sans KR', sans-serif; font-size:14px; font-weight:600; color:#fff;
             background:#D96E86; padding:9px 18px; border-radius:999px; text-decoration:none;
             box-shadow:0 6px 16px rgba(217,110,134,0.3);
         }
@@ -100,7 +100,7 @@
     <header class="top-[57px] z-50 no-print">
         <div class="max-w-7xl mx-auto px-6 pt-8 pb-4 flex justify-end items-center">
             <div class="flex items-center space-x-4">
-                <button onclick="window.print()" class="bg-brand-navy hover:bg-opacity-90 text-white px-4 py-2 rounded-xl text-sm font-medium transition duration-200 shadow-sm flex items-center gap-2">
+                <button onclick="window.print()" class="bg-brand-navy hover:bg-opacity-90 text-white px-4 py-2 rounded-xl text-base font-medium transition duration-200 shadow-sm flex items-center gap-2">
                     <i class="fa-solid fa-file-pdf"></i> PDF 교안 출력하기
                 </button>
             </div>
@@ -117,27 +117,27 @@
                 <div class="flex flex-col gap-2" id="grade-tabs">
                     <button onclick="switchGrade(1)" id="tab-1" class="w-full text-left px-4 py-3 rounded-xl transition font-medium flex items-center justify-between bg-brand-rose text-white shadow-sm">
                         <span>1학년: 수 감각 형성</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
                     </button>
                     <button onclick="switchGrade(2)" id="tab-2" class="w-full text-left px-4 py-3 rounded-xl transition font-medium flex items-center justify-between text-brand-gold hover:bg-brand-peach">
                         <span>2학년: 자릿값과 연산</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
                     </button>
                     <button onclick="switchGrade(3)" id="tab-3" class="w-full text-left px-4 py-3 rounded-xl transition font-medium flex items-center justify-between text-brand-gold hover:bg-brand-peach">
                         <span>3학년: 분수와 측정</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
                     </button>
                     <button onclick="switchGrade(4)" id="tab-4" class="w-full text-left px-4 py-3 rounded-xl transition font-medium flex items-center justify-between text-brand-gold hover:bg-brand-peach">
                         <span>4학년: 각도와 도형 이동</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
                     </button>
                     <button onclick="switchGrade(5)" id="tab-5" class="w-full text-left px-4 py-3 rounded-xl transition font-medium flex items-center justify-between text-brand-gold hover:bg-brand-peach">
                         <span>5학년: 대칭과 약분·통분</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
                     </button>
                     <button onclick="switchGrade(6)" id="tab-6" class="w-full text-left px-4 py-3 rounded-xl transition font-medium flex items-center justify-between text-brand-gold hover:bg-brand-peach">
                         <span>6학년: 비와 비율·입체</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
                     </button>
                 </div>
             </div>
@@ -147,7 +147,7 @@
                 <h3 class="font-serif font-bold text-[#8c6e58] mb-2 flex items-center gap-2">
                     <i class="fa-solid fa-lightbulb"></i> 시각화 가이드
                 </h3>
-                <p class="text-xs text-[#8c6e58] leading-relaxed">
+                <p class="text-sm text-[#8c6e58] leading-relaxed">
                     오른쪽 패널의 <strong>'수학 기하 시뮬레이터'</strong>를 조작하여 수량 배합, 각도, 대칭, 비례 관계를 앙금 모델로 시각화해 보세요.
                     <strong>'AI 실물 사진 생성기'</strong>를 통해 단원별 실제 앙금플라워 사진을 AI 기술로 실시간 도출할 수 있습니다.
                 </p>
@@ -160,15 +160,15 @@
             <!-- Dynamic Dashboard Header -->
             <div class="bg-white rounded-3xl p-8 border border-[#e8e2da] shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6 no-print">
                 <div>
-                    <span id="grade-badge" class="bg-brand-rose text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">GRADE 1</span>
+                    <span id="grade-badge" class="bg-brand-rose text-white text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wider">GRADE 1</span>
                     <h2 id="grade-title" class="font-serif text-3xl font-bold mt-2 text-brand-clay">1학년: 수 감각과 기초 수학 경험 형성</h2>
-                    <p id="grade-subtitle" class="text-brand-gold mt-1 text-sm">구체물 기반 직관적 분류 및 대칭과 수 세기</p>
+                    <p id="grade-subtitle" class="text-brand-gold mt-1 text-base">구체물 기반 직관적 분류 및 대칭과 수 세기</p>
                 </div>
                 <div class="flex gap-3">
-                    <span class="bg-brand-warm text-brand-gold px-4 py-2 rounded-xl text-xs font-bold border border-[#e8e2da] flex items-center gap-2">
+                    <span class="bg-brand-warm text-brand-gold px-4 py-2 rounded-xl text-sm font-bold border border-[#e8e2da] flex items-center gap-2">
                         <i class="fa-solid fa-clock text-brand-rose"></i> 20주 과정
                     </span>
-                    <span class="bg-brand-warm text-brand-gold px-4 py-2 rounded-xl text-xs font-bold border border-[#e8e2da] flex items-center gap-2">
+                    <span class="bg-brand-warm text-brand-gold px-4 py-2 rounded-xl text-sm font-bold border border-[#e8e2da] flex items-center gap-2">
                         <i class="fa-solid fa-hourglass-half text-[#11caa0]"></i> 주 1회 90분
                     </span>
                 </div>
@@ -183,11 +183,11 @@
                         <h3 class="font-serif font-bold text-lg text-brand-clay flex items-center gap-2">
                             <i class="fa-solid fa-compass text-brand-navy"></i> 실시간 기하학 앙금 시뮬레이터
                         </h3>
-                        <span class="text-xs bg-brand-warm text-brand-gold px-2 py-1 rounded">Interactive</span>
+                        <span class="text-sm bg-brand-warm text-brand-gold px-2 py-1 rounded">Interactive</span>
                     </div>
                     
                     <!-- Dynamic Controller Interface -->
-                    <div id="sim-controller" class="mb-4 bg-brand-warm p-4 rounded-xl space-y-3 text-sm border border-[#e8e2da]">
+                    <div id="sim-controller" class="mb-4 bg-brand-warm p-4 rounded-xl space-y-3 text-base border border-[#e8e2da]">
                         <!-- Content injected by JavaScript -->
                     </div>
 
@@ -203,29 +203,29 @@
                         <h3 class="font-serif font-bold text-lg text-brand-clay flex items-center gap-2">
                             <i class="fa-solid fa-wand-magic-sparkles text-brand-rose"></i> AI 앙금플라워 사진 생성기
                         </h3>
-                        <span class="text-xs bg-brand-warm text-brand-gold px-2 py-1 rounded">Gemini 2.5 Flash Image</span>
+                        <span class="text-sm bg-brand-warm text-brand-gold px-2 py-1 rounded">Gemini 2.5 Flash Image</span>
                     </div>
 
                     <div class="space-y-4 flex-grow flex flex-col justify-between">
-                        <p class="text-xs text-brand-gold leading-relaxed">
+                        <p class="text-sm text-brand-gold leading-relaxed">
                             선택한 학년의 수학 주제에 특화된 현실적인 앙금플라워 작품 사진을 실시간으로 생성합니다. 아래 주차를 선택하고 버튼을 클릭하세요.
                         </p>
                         
                         <div class="bg-brand-warm p-4 rounded-xl border border-[#e8e2da] space-y-3">
                             <div>
-                                <label class="block text-xs font-bold text-brand-gold mb-1">대상 주차 및 학습 내용 선택</label>
-                                <select id="ai-week-select" class="w-full bg-white border border-[#e8e2da] rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand-rose">
+                                <label class="block text-sm font-bold text-brand-gold mb-1">대상 주차 및 학습 내용 선택</label>
+                                <select id="ai-week-select" class="w-full bg-white border border-[#e8e2da] rounded-lg p-2 text-base focus:outline-none focus:ring-1 focus:ring-brand-rose">
                                     <!-- Injected via JS based on active grade -->
                                 </select>
                             </div>
-                            <button id="ai-generate-btn" onclick="triggerAiGeneration()" class="w-full bg-brand-rose hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-xl transition duration-200 flex items-center justify-center gap-2 text-sm">
+                            <button id="ai-generate-btn" onclick="triggerAiGeneration()" class="w-full bg-brand-rose hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-xl transition duration-200 flex items-center justify-center gap-2 text-base">
                                 <i class="fa-solid fa-image"></i> 실물 사진 AI로 생성하기
                             </button>
                         </div>
 
                         <!-- Image Display/Loading skeleton -->
                         <div class="relative flex-grow flex items-center justify-center border border-dashed border-[#e8e2da] rounded-xl p-4 min-h-[180px] bg-brand-peach mt-4 overflow-hidden" id="ai-photo-container">
-                            <div class="text-center text-brand-gold text-xs space-y-2" id="ai-photo-placeholder">
+                            <div class="text-center text-brand-gold text-sm space-y-2" id="ai-photo-placeholder">
                                 <i class="fa-solid fa-camera-retro text-3xl text-brand-rose opacity-60"></i>
                                 <p>생성된 사진이 여기에 표시됩니다.</p>
                             </div>
@@ -245,7 +245,7 @@
                         <h3 class="font-serif text-lg font-bold mb-2 text-brand-clay flex items-center gap-2">
                             <i class="fa-solid fa-graduation-cap text-brand-navy"></i> 2022 개정 교육과정 정합성
                         </h3>
-                        <p id="grade-edu-core" class="text-sm text-brand-gold leading-relaxed">
+                        <p id="grade-edu-core" class="text-base text-brand-gold leading-relaxed">
                             <!-- Injected by JS -->
                         </p>
                     </div>
@@ -253,7 +253,7 @@
                         <h3 class="font-serif text-lg font-bold mb-2 text-brand-clay flex items-center gap-2">
                             <i class="fa-solid fa-mortar-pestle text-brand-rose"></i> 앙금 융합 개념
                         </h3>
-                        <p id="grade-flower-core" class="text-sm text-brand-gold leading-relaxed">
+                        <p id="grade-flower-core" class="text-base text-brand-gold leading-relaxed">
                             <!-- Injected by JS -->
                         </p>
                     </div>
@@ -265,7 +265,7 @@
                         <i class="fa-solid fa-list-check text-brand-navy"></i> 20주 완성 연간 세부 커리큘럼
                     </h3>
                     <div class="overflow-x-auto rounded-xl border border-[#e8e2da]">
-                        <table class="w-full text-sm text-left" id="curriculum-table">
+                        <table class="w-full text-base text-left" id="curriculum-table">
                             <!-- Injected by JS -->
                         </table>
                     </div>
@@ -274,26 +274,26 @@
                 <!-- Post-Activity Guidance -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-[#e8e2da]">
                     <div class="bg-brand-warm p-5 rounded-2xl border border-[#e8e2da]">
-                        <h4 class="font-bold text-sm text-brand-clay mb-2 flex items-center gap-2">
+                        <h4 class="font-bold text-base text-brand-clay mb-2 flex items-center gap-2">
                             <i class="fa-solid fa-heart text-brand-rose"></i> 추천 활동 및 도구 가이드
                         </h4>
-                        <p id="guide-activity" class="text-xs text-brand-gold leading-relaxed">
+                        <p id="guide-activity" class="text-sm text-brand-gold leading-relaxed">
                             <!-- Injected by JS -->
                         </p>
                     </div>
                     <div class="bg-brand-warm p-5 rounded-2xl border border-[#e8e2da]">
-                        <h4 class="font-bold text-sm text-brand-clay mb-2 flex items-center gap-2">
+                        <h4 class="font-bold text-base text-brand-clay mb-2 flex items-center gap-2">
                             <i class="fa-solid fa-clipboard-check text-brand-emerald"></i> 과정 중심 평가 방식
                         </h4>
-                        <p id="guide-evaluation" class="text-xs text-brand-gold leading-relaxed">
+                        <p id="guide-evaluation" class="text-sm text-brand-gold leading-relaxed">
                             <!-- Injected by JS -->
                         </p>
                     </div>
                     <div class="bg-brand-warm p-5 rounded-2xl border border-[#e8e2da]">
-                        <h4 class="font-bold text-sm text-brand-clay mb-2 flex items-center gap-2">
+                        <h4 class="font-bold text-base text-brand-clay mb-2 flex items-center gap-2">
                             <i class="fa-solid fa-comments text-brand-navy"></i> 홈 링크 (학부모 안내)
                         </h4>
-                        <p id="guide-parent" class="text-xs text-brand-gold leading-relaxed">
+                        <p id="guide-parent" class="text-sm text-brand-gold leading-relaxed">
                             <!-- Injected by JS -->
                         </p>
                     </div>
@@ -311,9 +311,9 @@
                 <i id="modal-icon" class="text-2xl"></i>
                 <h3 id="modal-title" class="font-serif font-bold text-lg">알림</h3>
             </div>
-            <p id="modal-message" class="text-sm text-brand-gold leading-relaxed"></p>
+            <p id="modal-message" class="text-base text-brand-gold leading-relaxed"></p>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="bg-brand-navy text-white text-sm font-bold py-2 px-5 rounded-xl hover:bg-opacity-90 transition">
+                <button onclick="closeModal()" class="bg-brand-navy text-white text-base font-bold py-2 px-5 rounded-xl hover:bg-opacity-90 transition">
                     확인
                 </button>
             </div>
@@ -324,7 +324,7 @@
     <footer class="bg-white border-t border-[#e8e2da] mt-12 py-8 no-print">
         <div class="max-w-7xl mx-auto px-6 text-center space-y-2">
             <p class="font-serif text-lg font-bold text-brand-clay">BloomMath</p>
-            <p class="text-xs text-brand-gold">© 2026 BloomMath. All Rights Reserved. 2022 개정 교육과정 기준 준수.</p>
+            <p class="text-sm text-brand-gold">© 2026 BloomMath. All Rights Reserved. 2022 개정 교육과정 기준 준수.</p>
         </div>
     </footer>
 
@@ -597,7 +597,7 @@
                         <th class="p-3 w-[30%]">앙금플라워 연계 활동</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-[#e8e2da] text-xs text-brand-clay">
+                <tbody class="divide-y divide-[#e8e2da] text-sm text-brand-clay">
             `;
 
             let currentSection = "";
@@ -615,7 +615,7 @@
 
                 tableHTML += `
                     <tr class="hover:bg-brand-peach transition duration-150">
-                        <td class="p-3 text-center font-bold text-brand-rose text-sm">${item.week}</td>
+                        <td class="p-3 text-center font-bold text-brand-rose text-base">${item.week}</td>
                         <td class="p-3 font-semibold text-brand-clay">${item.concept}</td>
                         <td class="p-3 text-[#6e5f54] leading-relaxed">${item.content}</td>
                         <td class="p-3 text-brand-navy font-medium leading-relaxed">${item.activity}</td>
@@ -630,7 +630,7 @@
         // Reset AI Visualizer View
         function resetAiPhotoPlaceholder() {
             document.getElementById("ai-photo-container").innerHTML = `
-                <div class="text-center text-brand-gold text-xs space-y-2" id="ai-photo-placeholder">
+                <div class="text-center text-brand-gold text-sm space-y-2" id="ai-photo-placeholder">
                     <i class="fa-solid fa-camera-retro text-3xl text-brand-rose opacity-60"></i>
                     <p>생성된 사진이 여기에 표시됩니다.</p>
                 </div>
@@ -669,7 +669,7 @@
                 // Grade 1 Controller (10 가르기/모으기)
                 controller.innerHTML = `
                     <div class="space-y-2">
-                        <div class="flex justify-between font-bold text-xs">
+                        <div class="flex justify-between font-bold text-sm">
                             <span>분홍 앙금볼 수: <span class="text-brand-darkrose font-bold">${simState.g1_value}개</span></span>
                             <span>흰 앙금볼 수: <span class="text-slate-500 font-bold">${10 - simState.g1_value}개</span></span>
                         </div>
@@ -683,12 +683,12 @@
                 // Grade 2 Controller (세 자리 수 자릿값)
                 controller.innerHTML = `
                     <div class="space-y-2">
-                        <div class="flex justify-between font-bold text-xs">
+                        <div class="flex justify-between font-bold text-sm">
                             <span>세 자리 수 입력: </span>
                             <span class="text-brand-darkrose font-bold">${simState.g2_value}</span>
                         </div>
                         <input type="number" min="100" max="999" value="${simState.g2_value}" onchange="updateSimState('g2_value', this.value)" class="w-full bg-white border border-[#e8e2da] rounded px-3 py-1 text-center font-bold">
-                        <p class="text-[10px] text-brand-gold text-center">100부터 999 사이의 세 자리 숫자를 입력 후 앤터를 쳐보세요.</p>
+                        <p class="text-[12px] text-brand-gold text-center">100부터 999 사이의 세 자리 숫자를 입력 후 앤터를 쳐보세요.</p>
                     </div>
                 `;
                 drawGrade2SVG(canvas);
@@ -698,21 +698,21 @@
                 controller.innerHTML = `
                     <div class="space-y-2">
                         <div class="flex justify-between items-center gap-2">
-                            <span class="font-bold text-xs">등분수(분모) 선택:</span>
-                            <select onchange="updateSimState('g3_denom', this.value)" class="bg-white border rounded px-2 py-1 text-xs">
+                            <span class="font-bold text-sm">등분수(분모) 선택:</span>
+                            <select onchange="updateSimState('g3_denom', this.value)" class="bg-white border rounded px-2 py-1 text-sm">
                                 <option value="4" ${simState.g3_denom == 4 ? 'selected' : ''}>4등분</option>
                                 <option value="6" ${simState.g3_denom == 6 ? 'selected' : ''}>6등분</option>
                                 <option value="8" ${simState.g3_denom == 8 ? 'selected' : ''}>8등분</option>
                             </select>
                         </div>
                         <div class="space-y-1">
-                            <div class="flex justify-between font-bold text-xs">
+                            <div class="flex justify-between font-bold text-sm">
                                 <span>꽃을 올릴 칸수(분자):</span>
                                 <span class="text-brand-darkrose">${simState.g3_slice}칸</span>
                             </div>
                             <input type="range" min="1" max="${simState.g3_denom}" value="${simState.g3_slice}" oninput="updateSimState('g3_slice', this.value)" class="w-full h-2 bg-brand-rose rounded-lg appearance-none cursor-pointer">
                         </div>
-                        <div class="text-center font-bold text-brand-navy text-sm">분수값: <span class="text-lg font-bold">${simState.g3_slice}/${simState.g3_denom}</span></div>
+                        <div class="text-center font-bold text-brand-navy text-base">분수값: <span class="text-lg font-bold">${simState.g3_slice}/${simState.g3_denom}</span></div>
                     </div>
                 `;
                 // Constrain slice value if denom changed
@@ -725,12 +725,12 @@
                 // Grade 4 Controller (각도 장식)
                 controller.innerHTML = `
                     <div class="space-y-2">
-                        <div class="flex justify-between font-bold text-xs">
+                        <div class="flex justify-between font-bold text-sm">
                             <span>꽃잎이 벌어진 사잇각:</span>
                             <span class="text-brand-darkrose font-bold">${simState.g4_angle}°</span>
                         </div>
                         <input type="range" min="30" max="180" step="15" value="${simState.g4_angle}" oninput="updateSimState('g4_angle', this.value)" class="w-full h-2 bg-brand-rose rounded-lg appearance-none cursor-pointer">
-                        <div class="text-center text-xs font-bold text-brand-navy">
+                        <div class="text-center text-sm font-bold text-brand-navy">
                             종류: ${simState.g4_angle < 90 ? '예각 (Acute Angle)' : (simState.g4_angle == 90 ? '직각 (Right Angle)' : '둔각 (Obtuse Angle)')}
                         </div>
                     </div>
@@ -741,12 +741,12 @@
                 // Grade 5 Controller (선대칭, 점대칭 정원)
                 controller.innerHTML = `
                     <div class="space-y-2">
-                        <span class="block font-bold text-xs text-brand-gold text-center">대칭 구조 유형 변경</span>
+                        <span class="block font-bold text-sm text-brand-gold text-center">대칭 구조 유형 변경</span>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="updateSimState('g5_type', '선대칭')" class="py-2 px-3 rounded-lg text-xs font-bold border transition ${simState.g5_type === '선대칭' ? 'bg-brand-navy text-white' : 'bg-white border-[#e8e2da]' }">
+                            <button onclick="updateSimState('g5_type', '선대칭')" class="py-2 px-3 rounded-lg text-sm font-bold border transition ${simState.g5_type === '선대칭' ? 'bg-brand-navy text-white' : 'bg-white border-[#e8e2da]' }">
                                 선대칭 (Line Symmetry)
                             </button>
-                            <button onclick="updateSimState('g5_type', '점대칭')" class="py-2 px-3 rounded-lg text-xs font-bold border transition ${simState.g5_type === '점대칭' ? 'bg-brand-navy text-white' : 'bg-white border-[#e8e2da]' }">
+                            <button onclick="updateSimState('g5_type', '점대칭')" class="py-2 px-3 rounded-lg text-sm font-bold border transition ${simState.g5_type === '점대칭' ? 'bg-brand-navy text-white' : 'bg-white border-[#e8e2da]' }">
                                 점대칭 (Point Symmetry)
                             </button>
                         </div>
@@ -758,12 +758,12 @@
                 // Grade 6 Controller (비와 비율 & 원그래프)
                 controller.innerHTML = `
                     <div class="space-y-2">
-                        <div class="flex justify-between font-bold text-xs">
+                        <div class="flex justify-between font-bold text-sm">
                             <span>분홍 장미 비율:</span>
                             <span class="text-brand-darkrose font-bold">${simState.g6_ratio}%</span>
                         </div>
                         <input type="range" min="10" max="90" step="5" value="${simState.g6_ratio}" oninput="updateSimState('g6_ratio', this.value)" class="w-full h-2 bg-brand-rose rounded-lg appearance-none cursor-pointer">
-                        <div class="flex justify-between text-[11px] text-[#6e5f54] font-bold">
+                        <div class="flex justify-between text-[13px] text-[#6e5f54] font-bold">
                             <span>분홍장미 : 하늘수국 비 = ${simState.g6_ratio/5} : ${(100-simState.g6_ratio)/5}</span>
                             <span>비율 = ${simState.g6_ratio/100}</span>
                         </div>
@@ -1124,8 +1124,8 @@
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                     <div class="space-y-1">
-                        <p class="text-sm font-bold text-brand-navy">AI 앙금플라워 사진 생성 중...</p>
-                        <p class="text-[10px] text-brand-gold">학습 내용: ${timelineItem.concept}</p>
+                        <p class="text-base font-bold text-brand-navy">AI 앙금플라워 사진 생성 중...</p>
+                        <p class="text-[12px] text-brand-gold">학습 내용: ${timelineItem.concept}</p>
                     </div>
                 </div>
             `;
@@ -1138,7 +1138,7 @@
                 container.innerHTML = `
                     <div class="relative w-full h-full flex flex-col items-center justify-center animate-fade-in">
                         <img src="${generatedImgUrl}" alt="${timelineItem.concept}" class="w-full h-auto max-h-[220px] object-cover rounded-xl border border-[#e8e2da] shadow-sm">
-                        <div class="absolute bottom-2 left-2 bg-brand-clay bg-opacity-80 text-white px-2 py-1 rounded text-[10px] font-bold">
+                        <div class="absolute bottom-2 left-2 bg-brand-clay bg-opacity-80 text-white px-2 py-1 rounded text-[12px] font-bold">
                             실제 AI 도출 사진 (${timelineItem.concept})
                         </div>
                     </div>
@@ -1147,13 +1147,13 @@
                 // Graceful fallback to custom warning message if key is unpopulated or network fails
                 console.error("AI Generation Error: ", error);
                 container.innerHTML = `
-                    <div class="text-center text-brand-darkrose text-xs space-y-3 p-4">
+                    <div class="text-center text-brand-darkrose text-sm space-y-3 p-4">
                         <i class="fa-solid fa-triangle-exclamation text-3xl"></i>
                         <p class="font-bold">AI 사진 생성에 실패했습니다.</p>
-                        <p class="text-[10px] text-brand-gold leading-relaxed break-all">
+                        <p class="text-[12px] text-brand-gold leading-relaxed break-all">
                             오류 내용: ${(error && error.message) ? error.message : String(error)}
                         </p>
-                        <button onclick="resetAiPhotoPlaceholder()" class="bg-brand-gold text-white px-3 py-1 rounded-lg text-[10px]">
+                        <button onclick="resetAiPhotoPlaceholder()" class="bg-brand-gold text-white px-3 py-1 rounded-lg text-[12px]">
                             다시 시도
                         </button>
                     </div>
