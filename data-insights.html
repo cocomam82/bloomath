@@ -195,7 +195,7 @@
 
     <div class="chart-panel">
       <h3>한국 초4 수학: 성취도는 세계 3위, 흥미는 국제 최하위권</h3>
-      <p class="sub">TIMSS 2023, 58개국 중 순위 (숫자가 작을수록 상위권)</p>
+      <p class="sub">TIMSS 2023, 58개국 중 순위 (막대가 길수록 좋은 순위)</p>
       <div class="chart-wrap" style="height:260px;">
         <canvas id="gapChart" role="img" aria-label="한국 초등학교 4학년 수학 성취도 순위 3위, 자신감 순위 50위, 흥미 순위 58위를 보여주는 가로 막대 차트">한국 초4 수학 성취도 3위, 자신감 50위, 흥미 58위(최하위)</canvas>
       </div>
@@ -307,12 +307,16 @@
 const mutedText = '#8C7563';
 const gridColor = 'rgba(107,74,58,0.08)';
 
+const gapOriginalRanks = [3, 50, 58];
+const gapLabels = ['수학 성취도 · 3위', '자신감 · 50위', '흥미 · 58위 (최하위)'];
+
 new Chart(document.getElementById('gapChart'), {
   type: 'bar',
   data: {
-    labels: ['수학 성취도', '자신감', '흥미'],
+    labels: gapLabels,
     datasets: [{
-      data: [3, 50, 58],
+      // Inverted so a LONGER bar always means BETTER standing (58 countries total)
+      data: gapOriginalRanks.map(rank => 59 - rank),
       backgroundColor: ['#7FA8C9', '#EFB255', '#D96E86'],
       borderRadius: 6,
       barThickness: 34
@@ -321,15 +325,31 @@ new Chart(document.getElementById('gapChart'), {
   options: {
     indexAxis: 'y',
     responsive: true, maintainAspectRatio: false,
+    layout: { padding: { right: 56 } },
     plugins: {
       legend: { display: false },
-      tooltip: { callbacks: { label: (c) => c.raw + '위 (58개국 중)' } }
+      tooltip: { callbacks: { label: (c) => gapOriginalRanks[c.dataIndex] + '위 (58개국 중, 1위가 최상위)' } }
     },
     scales: {
-      x: { reverse: true, min: 0, max: 60, ticks: { color: mutedText, stepSize: 10 }, grid: { color: gridColor } },
+      x: { display: false, min: 0, max: 58 },
       y: { ticks: { color: mutedText, font: { size: 13 } }, grid: { display: false } }
     }
-  }
+  },
+  plugins: [{
+    id: 'rankEndLabel',
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      const meta = chart.getDatasetMeta(0);
+      ctx.save();
+      ctx.font = '600 13px "Gowun Dodum", sans-serif';
+      ctx.fillStyle = mutedText;
+      ctx.textBaseline = 'middle';
+      meta.data.forEach((bar, i) => {
+        ctx.fillText(gapOriginalRanks[i] + '위', bar.x + 10, bar.y);
+      });
+      ctx.restore();
+    }
+  }]
 });
 
 new Chart(document.getElementById('trendChart'), {
