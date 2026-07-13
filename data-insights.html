@@ -169,7 +169,7 @@
   <div class="wrap">
     <span class="section-label"><span class="num">1</span>왜 지금 초등 수학인가</span>
     <h2>실력은 최상위, 마음은 최하위권</h2>
-    <p class="lead">한국 초등학생의 사교육 참여율과 수학 성취도는 세계적으로도 매우 높은 수준이지만, 정작 수학을 &lsquo;좋아하는 마음&rsquo;은 국제 비교에서 가장 낮은 편에 속합니다.</p>
+    <p class="lead">한국 초등학생의 사교육 참여율과 수학 성취도는 세계적으로도 매우 높은 수준이지만, 정작 수학을 &lsquo;좋아하는 마음&rsquo;은 국제 비교에서 가장 낮은 편에 속합니다.<br><br></p>
 
     <div class="stat-grid">
       <div class="stat-card">
@@ -206,21 +206,23 @@
     <div class="chart-panel">
       <h3>학년이 올라가도 그대로인 흥미·자신감 &mdash; 초4와 중2, 나란히 보면</h3>
       <p class="sub">TIMSS 2023, 각 학년 조사 대상국 중 상위 백분율 (막대가 길수록 상위권)</p>
-      <div class="chart-wrap" style="height:260px;">
-        <canvas id="gradeCompareChart" role="img" aria-label="초등학교 4학년과 중학교 2학년의 수학 흥미도, 자신감 국제 순위를 비교하는 가로 막대 차트. 초4는 58개국 중 흥미 58위, 자신감 50위. 중2는 43개국 중 흥미 37위, 자신감 38위">초4(58개국 중) 흥미 58위·자신감 50위 / 중2(43개국 중) 흥미 37위·자신감 38위</canvas>
+      <div class="chart-wrap" style="height:280px;">
+        <canvas id="gradeCompareChart" role="img" aria-label="흥미와 자신감 두 항목을 기준으로 초4와 중2를 나란히 비교하는 그룹 막대 차트. 흥미: 초4 58위/58개국(상위 2%), 중2 37위/43개국(상위 16%). 자신감: 초4 50위/58개국(상위 16%), 중2 38위/43개국(상위 14%)">흥미: 초4 58위/58개국, 중2 37위/43개국 / 자신감: 초4 50위/58개국, 중2 38위/43개국</canvas>
       </div>
-      <p class="sub" style="margin-top:14px; margin-bottom:0;">국가 수가 달라 순위를 그대로 비교하기는 어렵지만, 백분율로 환산해도 두 학년 모두 하위 15% 안팎에 머뭅니다. 한 번 낮아진 흥미는 학년이 바뀌어도 저절로 회복되지 않는다는 뜻입니다. &mdash; 그렇다면 관건은 &lsquo;언제 잡아주는가&rsquo;이고, 답은 되도록 이른 초등 시기입니다.</p>
+      <p class="sub" style="margin-top:14px; margin-bottom:0;">초4·중2 모두 하위권에 머뭅니다. &mdash; 그렇다면 관건은 &lsquo;언제 잡아주는가&rsquo;이고, 답은 되도록 이른 초등 시기입니다.</p>
       <p class="source-note">출처: IEA TIMSS 2023 (교육부·한국교육과정평가원, 2024.12.4 발표) &middot; 국가 수 차이를 반영해 상위 백분율로 환산</p>
     </div>
 
     <div class="chart-panel">
-      <h3>초등학생 1인당 월평균 사교육비 추이</h3>
-      <p class="sub">전체학생 기준, 3년간 지속 증가</p>
-      <div class="chart-wrap" style="height:260px;">
-        <canvas id="trendChart" role="img" aria-label="초등학생 월평균 사교육비가 2022년 37만2천원에서 2024년 44만2천원으로 증가한 추세를 보여주는 선 그래프">2022년 37.2만원, 2023년 39.8만원, 2024년 44.2만원</canvas>
+      <h3>자신감은 있는데, 왜 흥미는 없을까 &mdash; 자신감과 흥미도의 상관관계</h3>
+      <p class="sub">TIMSS 2023 초4, 아시아·유럽·북미 17개국 비교 (자신감 척도점수 vs &lsquo;수학을 좋아한다&rsquo;고 답한 비율)</p>
+      <div class="chart-wrap" style="height:340px;">
+        <canvas id="corrChart" role="img" aria-label="자신감 척도점수와 수학을 좋아한다고 답한 학생 비율의 관계를 보여주는 산점도. 국제평균, 홍콩, 싱가포르, 일본, 대만, 한국, 핀란드, 영국, 독일, 네덜란드, 호주, 미국, 프랑스, 이탈리아, 스웨덴, 아일랜드, 스페인 17개 지점 표시. 대부분 국가는 자신감이 높을수록 흥미도도 높은 경향을 따르지만 한국은 자신감(9.7점)이 홍콩과 같은데도 흥미도(52%)가 추세선보다 약 12%포인트 낮게 벗어나 17개국 중 가장 큰 음의 격차를 보임">자신감-흥미도 산점도(17개국): 프랑스(10.3, 82%), 국제평균(10.0, 76%), 스페인(9.8, 75%), 이탈리아(10.2, 74%), 미국(10.0, 72%), 홍콩(9.7, 72%), 호주(9.9, 68%), 네덜란드(10.3, 68%), 영국(9.9, 67%), 싱가포르(9.6, 69%), 독일(10.1, 64%), 아일랜드(10.0, 63%), 핀란드(10.2, 63%), 스웨덴(10.1, 61%), 일본(9.2, 58%), 대만(9.4, 54%), 한국(9.7, 52%, 추세선 대비 -12%p로 최대 이탈)</canvas>
       </div>
-      <p class="source-note">출처: 통계청·교육부 「초중고사교육비조사」 (2022~2024)</p>
+      <p class="sub" style="margin-top:16px; margin-bottom:0;">17개국을 비교해도 결론은 같습니다. 자신감이 높을수록 흥미도도 오르는 게 보통인데(상관계수 약 0.50), 한국은 이 흐름에서 가장 크게 벗어나 있습니다. 자신감 점수가 홍콩과 똑같은데도(9.7점), &lsquo;수학을 좋아한다&rsquo;는 응답은 홍콩보다 20%포인트나 낮습니다(52% vs 72%).<br><br>원인은 아이들이 아니라 방식에 있습니다. 한국교육과정평가원도 &ldquo;수학을 진학을 위한 도구로 인식하는 경향이 높기 때문&rdquo;이라고 짚었습니다. 문제 풀이와 진도만 좇는 학습으로는 &lsquo;할 수 있다&rsquo;는 만들어져도 &lsquo;하고 싶다&rsquo;는 생기지 않습니다. 꽃셈수학이 정답을 맞히는 것보다 손으로 만지고 눈으로 확인하는 순간에 먼저 집중하는 이유입니다.</p>
+      <p class="source-note">출처: IEA TIMSS 2023 International Results, Exhibit 6.2.2 &middot; 6.2.5 (Grade 4 Mathematics) &middot; 한국교육과정평가원 TIMSS 2019 결과 분석(에듀인뉴스, 2020.12.8)</p>
     </div>
+
   </div>
 </section>
 
@@ -419,87 +421,198 @@ new Chart(document.getElementById('gapChart'), {
   }]
 });
 
-const gradeCompareRaw = [
-  { grade: '초4 · 흥미', rank: 58, total: 58 },
-  { grade: '초4 · 자신감', rank: 50, total: 58 },
-  { grade: '중2 · 흥미', rank: 37, total: 43 },
-  { grade: '중2 · 자신감', rank: 38, total: 43 }
-];
+const gradeCompareRaw = {
+  categories: ['흥미', '자신감'],
+  grade4: [
+    { rank: 58, total: 58 },
+    { rank: 50, total: 58 }
+  ],
+  grade8: [
+    { rank: 37, total: 43 },
+    { rank: 38, total: 43 }
+  ]
+};
+const pct = d => Math.round((d.total - d.rank + 1) / d.total * 1000) / 10;
 
 new Chart(document.getElementById('gradeCompareChart'), {
   type: 'bar',
   data: {
-    labels: gradeCompareRaw.map(d => d.grade),
-    datasets: [{
-      data: gradeCompareRaw.map(d => Math.round((d.total - d.rank + 1) / d.total * 1000) / 10),
-      backgroundColor: ['#D96E86', '#EFB255', '#7FA8C9', '#A3BB80'],
-      borderRadius: 6,
-      barThickness: 30
-    }]
+    labels: gradeCompareRaw.categories,
+    datasets: [
+      {
+        label: '초4',
+        data: gradeCompareRaw.grade4.map(pct),
+        backgroundColor: '#D96E86',
+        borderRadius: 6,
+        barPercentage: 0.7, categoryPercentage: 0.6
+      },
+      {
+        label: '중2',
+        data: gradeCompareRaw.grade8.map(pct),
+        backgroundColor: '#7FA8C9',
+        borderRadius: 6,
+        barPercentage: 0.7, categoryPercentage: 0.6
+      }
+    ]
   },
   options: {
-    indexAxis: 'y',
     responsive: true, maintainAspectRatio: false,
-    layout: { padding: { right: 76 } },
+    layout: { padding: { top: 34 } },
     plugins: {
-      legend: { display: false },
+      legend: {
+        display: true, position: 'top', align: 'end',
+        labels: { color: mutedText, font: { size: 12.5 }, boxWidth: 12, boxHeight: 12, usePointStyle: true, pointStyle: 'circle' }
+      },
       tooltip: {
         callbacks: {
           label: (c) => {
-            const d = gradeCompareRaw[c.dataIndex];
-            return d.rank + '위 / ' + d.total + '개국 중 (상위 ' + c.raw + '%)';
+            const d = (c.datasetIndex === 0 ? gradeCompareRaw.grade4 : gradeCompareRaw.grade8)[c.dataIndex];
+            return c.dataset.label + ': ' + d.rank + '위 / ' + d.total + '개국 중 (상위 ' + c.raw + '%)';
           }
         }
       }
     },
     scales: {
-      x: { display: false, min: 0, max: 100 },
-      y: { ticks: { color: mutedText, font: { size: 13 } }, grid: { display: false } }
+      y: { display: false, min: 0, max: 100 },
+      x: { ticks: { color: mutedText, font: { size: 13.5, family: "'Gowun Dodum'" } }, grid: { display: false } }
     }
   },
   plugins: [{
-    id: 'gradeEndLabel',
+    id: 'gradeTopLabel',
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
-      const meta = chart.getDatasetMeta(0);
       ctx.save();
-      ctx.font = '600 12.5px "Gowun Dodum", sans-serif';
-      ctx.fillStyle = mutedText;
-      ctx.textBaseline = 'middle';
-      meta.data.forEach((bar, i) => {
-        const d = gradeCompareRaw[i];
-        ctx.fillText(d.rank + '위/' + d.total + '개국', bar.x + 10, bar.y);
+      ctx.font = '700 12px "Gaegu", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+      chart.data.datasets.forEach((dataset, di) => {
+        const meta = chart.getDatasetMeta(di);
+        const raw = di === 0 ? gradeCompareRaw.grade4 : gradeCompareRaw.grade8;
+        ctx.fillStyle = di === 0 ? '#D96E86' : '#5C86A6';
+        meta.data.forEach((bar, i) => {
+          ctx.fillText(raw[i].rank + '위/' + raw[i].total + '개국', bar.x, bar.y - 8);
+        });
       });
       ctx.restore();
     }
   }]
 });
 
-new Chart(document.getElementById('trendChart'), {
-  type: 'line',
+const corrData = [
+  { label: '국제 평균', x: 10.0, y: 76, isKR: false, dx: 10, dy: -6 },
+  { label: '홍콩', x: 9.7, y: 72, isKR: false, dx: 10, dy: 0 },
+  { label: '싱가포르', x: 9.6, y: 69, isKR: false, dx: -10, dy: -8, align: 'right' },
+  { label: '일본', x: 9.2, y: 58, isKR: false, dx: 10, dy: 0 },
+  { label: '대만', x: 9.4, y: 54, isKR: false, dx: 10, dy: 0 },
+  { label: '한국', x: 9.7, y: 52, isKR: true, dx: -12, dy: 0, align: 'right' },
+  { label: '핀란드', x: 10.2, y: 63, isKR: false, dx: 10, dy: 8 },
+  { label: '영국', x: 9.9, y: 67, isKR: false, dx: 10, dy: 8 },
+  { label: '독일', x: 10.1, y: 64, isKR: false, dx: -10, dy: 8, align: 'right' },
+  { label: '네덜란드', x: 10.3, y: 68, isKR: false, dx: 10, dy: 0 },
+  { label: '호주', x: 9.9, y: 68, isKR: false, dx: 10, dy: -8 },
+  { label: '미국', x: 10.0, y: 72, isKR: false, dx: 10, dy: 6 },
+  { label: '프랑스', x: 10.3, y: 82, isKR: false, dx: 10, dy: 0 },
+  { label: '이탈리아', x: 10.2, y: 74, isKR: false, dx: -10, dy: -8, align: 'right' },
+  { label: '스웨덴', x: 10.1, y: 61, isKR: false, dx: -10, dy: 8, align: 'right' },
+  { label: '아일랜드', x: 10.0, y: 63, isKR: false, dx: 10, dy: -8 },
+  { label: '스페인', x: 9.8, y: 75, isKR: false, dx: -10, dy: 0, align: 'right' }
+];
+// simple linear regression (least squares) over the 17 points above
+const corrN = corrData.length;
+const corrSumX = corrData.reduce((s, d) => s + d.x, 0);
+const corrSumY = corrData.reduce((s, d) => s + d.y, 0);
+const corrSumXY = corrData.reduce((s, d) => s + d.x * d.y, 0);
+const corrSumXX = corrData.reduce((s, d) => s + d.x * d.x, 0);
+const corrSlope = (corrN * corrSumXY - corrSumX * corrSumY) / (corrN * corrSumXX - corrSumX * corrSumX);
+const corrIntercept = (corrSumY - corrSlope * corrSumX) / corrN;
+const corrXMin = 9.0, corrXMax = 10.5;
+
+new Chart(document.getElementById('corrChart'), {
+  type: 'scatter',
   data: {
-    labels: ['2022년', '2023년', '2024년'],
-    datasets: [{
-      data: [37.2, 39.8, 44.2],
-      borderColor: '#D96E86',
-      backgroundColor: 'rgba(217,110,134,0.12)',
-      fill: true, tension: 0.3,
-      pointRadius: 5, pointBackgroundColor: '#D96E86',
-      pointBorderColor: '#FFFBF4', pointBorderWidth: 2,
-      borderWidth: 2.5
-    }]
+    datasets: [
+      {
+        label: '추세선',
+        type: 'line',
+        data: [
+          { x: corrXMin, y: corrSlope * corrXMin + corrIntercept },
+          { x: corrXMax, y: corrSlope * corrXMax + corrIntercept }
+        ],
+        borderColor: 'rgba(140,117,99,0.4)',
+        borderDash: [5, 5],
+        borderWidth: 1.5,
+        pointRadius: 0,
+        fill: false
+      },
+      {
+        label: '국가',
+        data: corrData.map(d => ({ x: d.x, y: d.y })),
+        backgroundColor: corrData.map(d => d.isKR ? '#D96E86' : '#7FA8C9'),
+        pointRadius: corrData.map(d => d.isKR ? 8 : 6),
+        pointHoverRadius: corrData.map(d => d.isKR ? 9 : 7)
+      }
+    ]
   },
   options: {
     responsive: true, maintainAspectRatio: false,
+    layout: { padding: { top: 10, right: 20, bottom: 6 } },
     plugins: {
       legend: { display: false },
-      tooltip: { callbacks: { label: (c) => c.raw + '만원' } }
+      tooltip: {
+        filter: (item) => item.datasetIndex === 1,
+        callbacks: { label: (c) => corrData[c.dataIndex].label + ': 자신감 ' + corrData[c.dataIndex].x + '점, 흥미도 ' + corrData[c.dataIndex].y + '%' }
+      }
     },
     scales: {
-      y: { min: 0, max: 50, ticks: { color: mutedText, callback: (v) => v + '만원' }, grid: { color: gridColor } },
-      x: { ticks: { color: mutedText }, grid: { display: false } }
+      x: {
+        min: corrXMin, max: corrXMax,
+        title: { display: true, text: '자신감 척도점수 (중심점 10)', color: mutedText, font: { size: 12 } },
+        ticks: { color: mutedText },
+        grid: { color: gridColor }
+      },
+      y: {
+        min: 40, max: 85,
+        title: { display: true, text: "'수학을 좋아한다'고 답한 비율(%)", color: mutedText, font: { size: 12 } },
+        ticks: { color: mutedText, callback: (v) => v + '%' },
+        grid: { color: gridColor }
+      }
     }
-  }
+  },
+  plugins: [{
+    id: 'corrLabels',
+    afterDatasetsDraw(chart) {
+      const { ctx, scales } = chart;
+      const meta = chart.getDatasetMeta(1);
+      ctx.save();
+      ctx.textBaseline = 'middle';
+      meta.data.forEach((point, i) => {
+        const d = corrData[i];
+        ctx.font = (d.isKR ? '700 13px' : '600 11.5px') + ' "Gowun Dodum", sans-serif';
+        ctx.fillStyle = d.isKR ? '#D96E86' : mutedText;
+        ctx.textAlign = d.align || 'left';
+        ctx.fillText(d.label, point.x + d.dx, point.y + d.dy);
+      });
+
+      // highlight Korea's gap vs trend line
+      const kr = corrData.find(d => d.isKR);
+      const krPix = scales.x.getPixelForValue(kr.x);
+      const yActualPix = scales.y.getPixelForValue(kr.y);
+      const yTrendPix = scales.y.getPixelForValue(corrSlope * kr.x + corrIntercept);
+      ctx.setLineDash([3, 3]);
+      ctx.strokeStyle = '#D96E86';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(krPix + 26, yActualPix);
+      ctx.lineTo(krPix + 26, yTrendPix);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.font = '700 11px "Gowun Dodum", sans-serif';
+      ctx.fillStyle = '#D96E86';
+      ctx.textAlign = 'left';
+      ctx.fillText('-12%p', krPix + 30, (yActualPix + yTrendPix) / 2);
+      ctx.restore();
+    }
+  }]
 });
 
 new Chart(document.getElementById('effectChart'), {
